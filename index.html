@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -36,12 +35,16 @@
         }
         function addElements(){
             var page = document.getElementById.bind(document);
-            page("main").innerHTML = '<blockquote class="twitter-tweet" data-dnt="true" data-theme="light"><p lang="en" dir="ltr">Amazing to see r/place coming back on <a href="https://twitter.com/Reddit?ref_src=twsrc%5Etfw">@Reddit</a> - can&#39;t wait to see what everyone comes up with this time! I&#39;ve even placed a pixel myself. Rick x <a href="https://t.co/DfxNJ2tGOR">https://t.co/DfxNJ2tGOR</a> <a href="https://twitter.com/hashtag/rplace?src=hash&amp;ref_src=twsrc%5Etfw">#rplace</a> <a href="https://twitter.com/hashtag/reddit?src=hash&amp;ref_src=twsrc%5Etfw">#reddit</a> <a href="https://t.co/llz8B7TFnZ">pic.twitter.com/llz8B7TFnZ</a></p>&mdash; Rick Astley (@rickastley) <a href="https://twitter.com/rickastley/status/1509881607980785672?ref_src=twsrc%5Etfw">April 1, 2022</a></blockquote>';
-
+            page("main").innerHTML = '<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Amazing to see r/place coming back on <a href="https://twitter.com/Reddit?ref_src=twsrc%5Etfw">@Reddit</a> - can&#39;t wait to see what everyone comes up with this time! I&#39;ve even placed a pixel myself. Rick x <a href="https://t.co/DfxNJ2tGOR">https://t.co/DfxNJ2tGOR</a> <a href="https://twitter.com/hashtag/rplace?src=hash&amp;ref_src=twsrc%5Etfw">#rplace</a> <a href="https://twitter.com/hashtag/reddit?src=hash&amp;ref_src=twsrc%5Etfw">#reddit</a> <a href="https://t.co/llz8B7TFnZ">pic.twitter.com/llz8B7TFnZ</a></p>&mdash; Rick Astley (@rickastley) <a href="https://twitter.com/rickastley/status/1509881607980785672?ref_src=twsrc%5Etfw">April 1, 2022</a></blockquote>';
+            
+            var script = document.createElement('script');
+            script.setAttribute('type', 'text/javascript');
+            script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
+            document.head.appendChild(script);
         }
-         </script>
+        </script>
     <div id="main" class="center">
-        <div id="overlay" onclick="addElements(); play();"><span class="header center">Don't click me...</span></div>
+        <div id="overlay" onclick="addElements(); play();"><span class="header center">Don&#39;t click me...</span></div>
         
     </div>
 </body>
