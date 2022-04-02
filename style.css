@@ -45,9 +45,9 @@ html,body {
   }
 }
 
-.backmost {
+#main {
 
-  height:100%;
-  
-  width:100%
+  transform: scale(0.5);
+  height:auto !important;
 }
+

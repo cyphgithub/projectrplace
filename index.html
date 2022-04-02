@@ -7,12 +7,10 @@
         <title>r/place project</title>
         <script id="twitterscript" type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <audio id="audio" src="inconspicuousaudio.mp3"></audio>
+        <audio id="audio" loop src="inconspicuousaudio.mp3"></audio>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
-        <link rel="preload" type="style" href="style.css">
         <link rel="preload" type="audio" href="inconspicuousaudio.mp3">
         <link rel="preload" type="image" href="inconspicuous.gif">
-        <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
 </head>
 
@@ -25,6 +23,9 @@
 
         function addElements(){
             
+            var texty = document.getElementById.bind(document);
+            texty("overlay").innerHTML = ''
+
             var page = document.getElementById.bind(document);
             page("main").innerHTML = '<blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">Amazing to see r/place coming back on <a href="https://twitter.com/Reddit?ref_src=twsrc%5Etfw">@Reddit</a> - can&#39;t wait to see what everyone comes up with this time! I&#39;ve even placed a pixel myself. Rick x <a href="https://t.co/DfxNJ2tGOR">https://t.co/DfxNJ2tGOR</a> <a href="https://twitter.com/hashtag/rplace?src=hash&amp;ref_src=twsrc%5Etfw">#rplace</a> <a href="https://twitter.com/hashtag/reddit?src=hash&amp;ref_src=twsrc%5Etfw">#reddit</a> <a href="https://t.co/llz8B7TFnZ">pic.twitter.com/llz8B7TFnZ</a></p>&mdash; Rick Astley (@rickastley) <a href="https://twitter.com/rickastley/status/1509881607980785672?ref_src=twsrc%5Etfw">April 1, 2022</a></blockquote>';
 
@@ -32,15 +33,17 @@
                 document.getElementById("main")
             );
 
-            document.body.style.setProperty('animation', 'background-fade 3s forwards');
+            document.body.style.setProperty('animation', 'background-fade 0.1s forwards');
+    
         }
         </script>
     <div class="container">
-        <div id="main" class="center">
-            <div id="overlay" onclick="addElements(); play();"><span class="header center">Don&#39;t click me...</span></div>
-        
+        <div id="main">
+    
         </div>
+        <div id="overlay" onclick="addElements(); play();"><span class="header center">Don&#39;t click me...</span></div>
     </div>
+    <link rel="stylesheet" href="style.css">
 </body>
 
 </html>
