@@ -16,7 +16,7 @@ html,body {
 
 .center {
 
-  position: fixed;
+  position: absolute;
 
   top: 50%;
 
@@ -29,7 +29,7 @@ html,body {
 
 @keyframes background-fade {
   0% {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 0, 0);
   }
   100% {
     background-image: url('inconspicuous.gif');
